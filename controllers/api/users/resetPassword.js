@@ -30,7 +30,7 @@ module.exports.resetPassword = async (req, res) => {
     user
       .save()
       .then(userSaved => {
-        const directLink = `http://192.168.1.26:3001/resetPassword/${
+        const directLink = `https://data-entries.herokuapp.com/resetPassword/${
           userSaved.resetPasswordToken
         }/${userSaved._id}`
         const { email, name } = userSaved
