@@ -27,7 +27,7 @@ route.post('/search', search)
 // @path POST /all
 // @desc Find Translation for language
 route.get('/all', all)
-schedule.scheduleJob('0 10 * * *', clean)
+// schedule.scheduleJob('0 10 * * *', clean)
 
 // @path POST /api/sprsheet/delete
 route.post('/delete', deleteSpreadsheet)
