@@ -106,6 +106,7 @@ const newSprsheet = async (req, res) => {
       const sprsheetInfo = await sheets.spreadsheets.get({ spreadsheetId })
       const { name: username } = await users.findById(userId)
       const saved = await createAndSave(sprsheetInfo, alias, username)
+      console.log(saved);
       return res.json({ saved: true, data: saved })
     } catch (err) {
       return res.status(400).json({ saved: false, errors: err })

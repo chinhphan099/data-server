@@ -10,13 +10,13 @@ const deleteSpreadsheet = async (req, res) => {
 
   // Delete all english documents related
   try {
-    //await translation_model.deleteMany({ site })
+    await translation_model.deleteMany({ site })
     await spreadsheets.findByIdAndDelete(spreadsheetId)
-    res.json({ deleted: true })
+    res.json({ deleted: true, site })
   } catch (err) {
     res.status(400).json({
       deleted: false,
-      err,
+      err
     })
   }
 }

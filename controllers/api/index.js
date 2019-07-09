@@ -17,6 +17,7 @@ const { search } = require('./tools/search')
 const { all, clean } = require('./tools/all')
 const { syncinfo } = require('./tools/syncinfo')
 const { deleteSpreadsheet } = require('./tools/deleteSpreadsheet')
+const { deleteAllSpreadsheet } = require('./tools/deleteAllSpreadsheet')
 const { setDefaultSpreadsheet } = require('./tools/setDefaultSpreadsheet')
 const { getWorkspaceData } = require('./tools/getWorkspaceData')
 
@@ -28,6 +29,7 @@ module.exports = {
     getSpreadsheetContent,
     search,
     deleteSpreadsheet,
+    deleteAllSpreadsheet,
     syncinfo,
     all,
     clean,

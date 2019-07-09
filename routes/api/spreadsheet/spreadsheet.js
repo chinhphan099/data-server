@@ -7,6 +7,7 @@ const {
   all,
   clean,
   deleteSpreadsheet,
+  deleteAllSpreadsheet,
   syncinfo,
   setDefaultSpreadsheet,
   getWorkspaceData,
@@ -31,6 +32,8 @@ route.get('/all', all)
 
 // @path POST /api/sprsheet/delete
 route.post('/delete', deleteSpreadsheet)
+
+route.post('/deleteallspreadsheets', deleteAllSpreadsheet)
 
 // @path POST /api/sprsheet/syncinfo
 route.post('/syncinfo', syncinfo)
