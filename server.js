@@ -11,10 +11,11 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-const { auth, sprsheet, users } = require('./routes/api')
+const { auth, sprsheet, users, aws } = require('./routes/api')
 app.use('/api/auth', auth)
 app.use('/api/sprsheet', sprsheet)
 app.use('/api/users', users)
+app.use('/api/aws', aws)
 
 const mongoUri = process.env.MONGODB_URI_PRODUCTION
 require('./utils/mongoose').connect(mongoUri)

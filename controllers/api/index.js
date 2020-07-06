@@ -9,6 +9,7 @@ const { getall } = require('./users/all')
 const { resetPassword } = require('./users/resetPassword')
 const { renewPassword } = require('./users/renewPassword')
 const { validResetToken } = require('./users/validResetToken')
+const { getsimages } = require('./aws/getsimages')
 
 // Spreadsheet API
 const { getSpreadsheetContent } = require('./tools/getSpreadsheetContent')
@@ -42,6 +43,9 @@ module.exports = {
     getall,
     resetPassword,
     renewPassword,
-    validResetToken,
+    validResetToken
   },
+  aws: {
+    getsimages
+  }
 }

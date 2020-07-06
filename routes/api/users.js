@@ -17,7 +17,7 @@ route.post('/signup', signup)
 // Sign in feature
 route.post('/signin', signin)
 
-// POST -> /api/users/all
+// GET -> /api/users/all
 // Get all user information
 route.get('/all', getall)
 
