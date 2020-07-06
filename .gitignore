@@ -5,6 +5,7 @@
 npm-debug.log
 .cache
 ._*
+.env
 Thumbs.db
 node_modules
 public
